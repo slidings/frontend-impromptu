@@ -1,0 +1,63 @@
+.consumer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.consumer form {
+  margin-bottom: 20px;
+}
+
+.consumer input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.consumer button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.consumer button:hover {
+  background-color: #218838;
+}
+
+.consumer .common-screen {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.consumer .common-screen h2 {
+  margin-bottom: 10px;
+}
+
+.consumer .common-screen ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.consumer .common-screen li {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.consumer .common-screen button {
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.consumer .common-screen button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,29 @@
+
+.welcome-screen {
+  text-align: center;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.section {
+  width: 45%;
+}
+
+.common-screen {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.common-screen ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.common-screen li {
+  margin: 5px 0;
+}
