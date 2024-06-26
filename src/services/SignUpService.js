@@ -1,9 +1,8 @@
 import { API_URL } from "../constants/constants";
 
-// user is an object with username, password, and email keys.
-const apiLogin = async (user, navigate, setErrors) => {
+const apiSignUp = async (user, navigate, setErrors) => {
   try {
-    const response = await fetch(`${API_URL}/login/`, {
+    const response = await fetch(`${API_URL}/signup/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -12,17 +11,15 @@ const apiLogin = async (user, navigate, setErrors) => {
       credentials: "include",
     });
 
+    const data = await response.json();
     if (!response.ok) {
-      if (response.status === 404) {
-        throw new Error("Invalid username");
-      } else if (response.status === 401) {
-        throw new Error("Invalid password");
+      if (response.status === 400) {
+        throw new Error(data.username || data.email || data.password);
       } else {
         throw new Error("An error occurred. Please try again later.");
       }
     }
 
-    const data = await response.json();
     localStorage.setItem("username", data.user.username);
     localStorage.setItem("token", data.token);
 
@@ -33,4 +30,4 @@ const apiLogin = async (user, navigate, setErrors) => {
   }
 };
 
-export default apiLogin;
+export default apiSignUp;

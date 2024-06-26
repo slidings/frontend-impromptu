@@ -5,7 +5,7 @@ import apiLogin from "../services/LoginService.js";
 import { useNavigate } from "react-router-dom";
 
 function LogIn() {
-  const [user, setUser] = useState({ username: "", email: "", password: "" });
+  const [user, setUser] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
 
@@ -48,16 +48,6 @@ function LogIn() {
             size="large"
           />
           <TextField
-            id="email"
-            label="Email"
-            variant="outlined"
-            value={user.email}
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
-            required
-            sx={{ marginBottom: "1rem", width: "300px" }}
-            size="large"
-          />
-          <TextField
             id="password"
             label="Password"
             type="password"
@@ -75,14 +65,32 @@ function LogIn() {
               {errors}
             </div>
           )}
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            size="large"
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              width: "100%",
+              maxWidth: "300px",
+              margin: "auto",
+            }}
           >
-            Login
-          </Button>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              size="large"
+            >
+              Login
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              onClick={() => navigate("/signup")}
+            >
+              signup
+            </Button>
+          </div>
         </form>
       </div>
     </>
