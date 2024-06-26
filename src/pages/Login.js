@@ -3,7 +3,6 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import apiLogin from "../services/LoginService.js";
 import { useNavigate } from "react-router-dom";
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
 function LogIn() {
   const [user, setUser] = useState({ username: "", email: "", password: "" });
@@ -18,26 +17,6 @@ function LogIn() {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed">
-          <Toolbar>
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-              Impromptu
-            </Typography>
-            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-              <Button
-                variant="contained"
-                color="success"
-                size="large"
-                //onClick={onLogout}
-                sx={{ ml: 2 }} // Optional margin-left to add some space between text and button
-              >
-                Sign Up
-              </Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
-      </Box>
       <div
         style={{
           display: "flex",
