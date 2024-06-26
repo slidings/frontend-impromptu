@@ -5,7 +5,7 @@ import apiLogin from "../services/LoginService.js";
 import { useNavigate } from "react-router-dom";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
-function Login() {
+function LogIn() {
   const [user, setUser] = useState({ username: "", email: "", password: "" });
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
@@ -110,4 +110,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LogIn;
